@@ -1,0 +1,324 @@
+/* Общие настройки */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    background-image: url(../img/fon.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+main {
+display: flex;
+flex-direction: column;
+flex: 1
+}
+
+aside {
+flex: 1;
+}
+
+section {
+flex: 3;
+}
+
+:root {
+    --green-color: #6dff85e0;
+    --oreng-color: #ff5b08;
+    --yellow-color: #ffe227e6;
+    --accent-color: #ddfff9;
+    --background-color: #1818189a;
+}
+
+.h1, .h2, .h3 {
+    color: var(--accent-color);
+}
+
+.text-h1 {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0px;
+    text-transform: inherit;
+}
+
+.text-h2 {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+.text-h3 {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: lowercase;
+}
+
+/* конец - Общих настроек */
+
+/* Шапка */
+
+.header {
+    background: var(--background-color);
+    flex-basis: 100px;
+}
+
+.header__title {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home {
+    display: block;
+    background: url(../img/icon/home.svg);
+    background-size: contain;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 0px auto;
+    transition: 0.3s;
+}
+
+.home:hover {
+    background: url(../img/icon/homehover.svg);
+    background-size: contain;
+    transition: 0.3s;
+}
+
+/* Конец - Шапка */
+
+/* Фото + анимация(кружок) */
+
+.foto {
+    flex-grow: 0;
+}
+
+.my__foto {
+    height: 160px;
+    width: 254px;
+    margin: 0 auto;
+}
+
+.info__beslan {
+    text-align: center;
+    padding-top: 112px;
+    font-size: 10px;
+}
+
+.info__foto {
+    width: 184px;
+    height: 172px;
+    background-image: url(../img/foto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.animation {
+    padding-left: 85px;
+    margin-top: -220px;
+}
+
+.circle {
+    top: 20%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid rgb(246 1 150 / 65%);
+    border-top: 3px solid #473cd4;
+    animation: animate 2s infinite linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-20%, 50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-20%, 50%) rotate(360deg);
+    }
+}
+
+/* Конец - Фото + анимация(кружок) */
+
+/* Контент */
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+}
+
+.block__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block__js {
+    color: var(--green-color);
+}
+
+.block__php {
+    color: var(--yellow-color);
+}
+
+.block__info {
+    color: var(--accent-color);
+}
+
+.block__item {
+    margin: 0px 10px;
+}
+
+.block__text {
+    margin: 0px 10px;
+}
+
+.hr__contact {
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid #ff1c1c;
+	box-shadow: 0 20px 20px -20px #ff00008c;
+	width: 20%;
+}
+
+.hr__content {
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid #ff4e09;
+	box-shadow: 0 20px 20px -20px #f7b90352;;
+	width: 40%;
+}
+
+/* Конец - Контент */
+
+
+/* Контакты */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.my__contact {
+    text-align: center;
+}
+
+.info__contact {
+    display: flex;
+}
+
+.social__media {
+    color: var(--oreng-color);
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.github {
+    display: block;
+    background: url(../img/icon/github.svg);
+    background-size: contain;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0px 2px;
+    transition: 0.3s;
+}
+
+.github:hover {
+    background: url(../img/icon/githubhover.svg);
+    background-size: contain;
+    transition: 1s;
+}
+
+.telegram {
+    display: block;
+    background: url(../img/icon/telegra.svg);
+    background-size: contain;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0px 2px;
+    transition: 0.3s;
+}
+
+.telegram:hover {
+    background: url(../img/icon/telegramhover.svg);
+    background-size: contain;
+}
+
+.whatsapp {
+    display: block;
+    background: url(../img/icon/whatsapp.svg);
+    background-size: contain;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0px 2px;
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    background: url(../img/icon/whatsapphover.svg);
+    background-size: contain;
+}
+
+/* Конец - Контакты */
+
+/* Подвал */
+
+.footer {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    flex-basis: 100px;
+}
+
+.p__text {
+    text-align: center;
+    margin: 10px;
+}
+
+.place {
+    text-align: center;
+}
+
+/* Конец - Подвал */
